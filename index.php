@@ -80,7 +80,7 @@
 		<li>
 			<form method="POST" action="update_cart.php">
 				<div>
-					<button type="submit" class="add_to_cart" >Buy Now</button>
+					<button type="submit" class="add_to_cart" >Add to Cart</button>
 				</div>
 				<a href="product.php?id=<?php echo $row['id'];?>">
 				<div class="product_photo">
