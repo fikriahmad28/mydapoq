@@ -41,6 +41,7 @@
 <div class="container">
 <div class="slider">
 	<div class="cycle-slideshow" data-cycle-fx="scrollHorz">
+		<<img src="images/bannerpromo.jpg">
 		<img src="images/banner01.jpg">
 		<img src="images/banner02.jpg">
 		<img src="images/banner03.jpg">
