@@ -2,6 +2,7 @@
 	<?php
 		if(isset($_SESSION['username']) == TRUE ) {
 	?>
+	<li><a class="active" href="dashboard.php">Dashboard</a></li>
 	<li><a class="active" href="product_add.php">New Product</a></li>
 	<li><a href="product_list.php">Product List</a></li>
 	<li><a href="sales.php">Sales</a></li>	
