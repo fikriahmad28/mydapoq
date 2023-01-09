@@ -33,6 +33,7 @@ $sql2 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from 
 $sql3 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from products WHERE category=2;")));
 $sql4 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from products WHERE category=3;")));
 $sql5 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from products WHERE category=4;")));
+$sql6 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT sum(product_price) as total from sales;")));
 ?>
 
 <div class="cart-view-table-back">
@@ -45,6 +46,9 @@ $sql5 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from 
             <p>Total Product - Cookware [ <?= $sql3['total']?> ] products</p>
             <p>Total Product - Microwave & Oven[ <?= $sql4['total']?> ] products</p>
             <p>Total Product - Cooktops[ <?= $sql5['total']?> ] products</p>
+        </div>
+        <div class="card">
+            <p>Total Sales RM <?= $sql6['total']?></p>
         </div>
 	</div>
 	</form>
