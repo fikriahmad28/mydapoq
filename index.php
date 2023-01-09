@@ -1,15 +1,24 @@
 <?php
-	include("config.php");
-	session_start();
-	if(isset($_SESSION['cart_products'])) {
-		$total_cart = count($_SESSION['cart_products']); }
-	else {
-		$total_cart = 0;
+include("config.php");
+session_start();
+
+$success_notif = "";
+if (isset($_SESSION['cart_products'])) {
+	$total_cart = count($_SESSION['cart_products']);
+	
+	if($total_cart > 0 ) {
+		$_SESSION['success-notif'] = "Items add to cart!";
+		$success_notif = $_SESSION['success-notif'];
+
 	}
-	unset($_SESSION['username']);
-	// nav-menu category
-	$query_category = 'SELECT * FROM category';
-	$result_category = mysqli_query($conn, $query_category) or die (mysqli_error($conn));
+
+} else {
+	$total_cart = 0;
+}
+unset($_SESSION['username']);
+// nav-menu category
+$query_category = 'SELECT * FROM category';
+$result_category = mysqli_query($conn, $query_category) or die(mysqli_error($conn));
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,6 +60,11 @@
 </div>
 	<!-- SENARAI PRODUK -->
 	<ul class="products">
+
+	<?php if (isset($_SESSION['cart_products'])) { if($total_cart > 0 ) { ?>
+				<h4><?= $success_notif ?></h4>
+			<?php } }?>
+
 	<h3>Featured Products</h3>
 
 	<?php 

@@ -32,7 +32,7 @@
 			</div>
 		</div>
 	</div>
-<div class="container">
+	<div class="container">
 	<?php include('cart_item.php'); ?>
 	<div class="section-contact">
 		<h3>For more info, kindly call our company at</h3>
@@ -49,6 +49,31 @@
 		<h4>You can call us during our working hours:</h4>
 		<label>Monday - Friday: 10am - 10pm</label>
 		<label>Weekends and Public Holidays: 9am - 9pm</label>
+
+		<h4>Or through our Contact Us form below:</h4>
+
+		<div class="contact-us-container">
+		<form method="post" name="contact-us">
+			<table class="contact-us">
+				<tr><td class="left"><p>Name</p></td>
+					<td><input type="text" name="con-name" required></td>
+				</tr>
+				<tr><td><p>Phone Number</p></td>
+					<td	td><input type="text" name="con-phone" required></td>
+				</tr>
+				<tr><td><p>Email Address</p></td>
+					<td><input type="text" name="con-email" required></td>
+				</tr>
+				<tr><td><p>Remarks</p></td>
+					<td><textarea name="remarks"></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button type="submit" name="con-submit">Submit</button></td>
+				</tr>
+			</table>
+		</form>
+		</div>
 	</div>
 </div>
 <footer>
