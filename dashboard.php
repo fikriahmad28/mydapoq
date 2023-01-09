@@ -26,9 +26,28 @@
 	<?php include('nav-menu.php'); ?>
 </nav>
 <div class="container">
+<?php
+// admin dashboard
+$sql1 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from products;")));
+$sql2 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from products WHERE category=1;")));
+$sql3 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from products WHERE category=2;")));
+$sql4 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from products WHERE category=3;")));
+$sql5 = mysqli_fetch_assoc((mysqli_query($conn, "SELECT count(id) as total from products WHERE category=4;")));
+?>
 
 <div class="cart-view-table-back">
 	<h3 align="center"><img src="images/icon-add.png" style="width: 20px"> Dashboard</h3>
+	<form method="POST" enctype="multipart/form-data">
+	<div class="form">
+        <div class="card">
+            <p>Total Product [ <?= $sql1['total']?> ] products</p>
+            <p>Total Product - Blender & Mixer [ <?= $sql2['total']?> ] products</p>
+            <p>Total Product - Cookware [ <?= $sql3['total']?> ] products</p>
+            <p>Total Product - Microwave & Oven[ <?= $sql4['total']?> ] products</p>
+            <p>Total Product - Cooktops[ <?= $sql5['total']?> ] products</p>
+        </div>
+	</div>
+	</form>
 	</div>
 	</div>
 </div>
