@@ -61,10 +61,6 @@ $result_category = mysqli_query($conn, $query_category) or die(mysqli_error($con
 	<!-- SENARAI PRODUK -->
 	<ul class="products">
 
-	<?php if (isset($_SESSION['cart_products'])) { if($total_cart > 0 ) { ?>
-				<h4><?= $success_notif ?></h4>
-			<?php } }?>
-
 	<h3>Featured Products</h3>
 
 	<?php 

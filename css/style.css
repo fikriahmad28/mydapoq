@@ -1274,23 +1274,3 @@ footer.section-2 ul li a:hover {
 	color: #01B5B5;
 	text-decoration: none;
 }
-
-.contact-us-container {
-	width: 70%;
-}
-
-.contact-us table {
-	width: 100%;
-}
-
-.contact-us table, td {
-	padding: 5px;
-}
-
-.contact-us td.left {
-	width: 30%;
-}
-
-.contact-us input, textarea {
-	width: 100%;
-}
